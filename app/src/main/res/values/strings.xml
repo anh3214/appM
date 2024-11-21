@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Medicine Tracker</string>
+    <string name="button_view_list">View Medicines List</string>
+    <string name="button_add_medicine">Add Medicine</string>
+    <string name="hint_medicine_id">Medicine ID</string>
+    <string name="hint_user_id">User ID</string>
+    <string name="hint_function">Function</string>
+    <string name="hint_usage">Usage</string>
+    <string name="hint_note">Note</string>
+    <string name="button_save">Save</string>
+</resources>
