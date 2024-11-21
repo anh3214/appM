@@ -66,7 +66,7 @@
             android:autofillHints=""
             android:inputType="text"
             android:layout_height="wrap_content"
-            android:hint="Storage Condition"/>
+            android:hint="@string/storage_condition"/>
 
         <EditText
             android:id="@+id/ingredients_input"
@@ -74,7 +74,7 @@
             android:autofillHints=""
             android:inputType="text"
             android:layout_height="wrap_content"
-            android:hint="Ingredients"/>
+            android:hint="@string/ingredients"/>
 
         <EditText
             android:id="@+id/meal_schedule_input"
@@ -82,14 +82,14 @@
             android:layout_height="wrap_content"
             android:autofillHints=""
             android:inputType="number"
-            android:hint="Meal Schedule"/>
+            android:hint="@string/meal_schedule"/>
 
         <EditText
             android:id="@+id/quantity_left_input"
             android:layout_width="match_parent"
             android:autofillHints=""
             android:layout_height="wrap_content"
-            android:hint="Quantity Left"
+            android:hint="@string/quantity_left"
             android:inputType="number"/>
 
         <EditText
@@ -98,14 +98,14 @@
             android:autofillHints=""
             android:inputType="number"
             android:layout_height="wrap_content"
-            android:hint="Warehouse No."/>
+            android:hint="@string/warehouse_no"/>
 
         <EditText
             android:id="@+id/times_per_day_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:autofillHints=""
-            android:hint="Times Per Day"
+            android:hint="@string/times_per_day"
             android:inputType="number"/>
 
         <Button

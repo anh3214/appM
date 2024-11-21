@@ -1,6 +1,7 @@
 package com.example.myapplication.ui.activities
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.room.Room
@@ -14,14 +15,18 @@ class MedicineListActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list)
 
-        val database = Room.databaseBuilder(
-            applicationContext,
-            AppDatabase::class.java,
-            "app_database"
-        ).build()
-
-        val repository = MedicineRepository(database.medicineDao())
-        showFragment(MedicineListFragment(repository))
+        try {
+            // Initialize the database
+            val database = Room.databaseBuilder(
+                applicationContext,
+                AppDatabase::class.java,
+                "app_database"
+            ).build()
+            val repository = MedicineRepository(database.medicineDao())
+            showFragment(MedicineListFragment(repository))
+        } catch (e: Exception) {
+            Toast.makeText(this, "Error initializing the database: ${e.message}", Toast.LENGTH_LONG).show()
+        }
     }
 
     private fun showFragment(fragment: Fragment) {

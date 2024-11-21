@@ -22,5 +22,13 @@
         android:text="@string/button_add_medicine"
         android:textSize="@dimen/text_size_medium"
         android:backgroundTint="@color/secondary_color"/>
+
+    <Button
+        android:id="@+id/button_add_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_add_user"
+        android:textSize="@dimen/text_size_medium"
+        android:backgroundTint="@color/secondary_color"/>
 </LinearLayout>
 

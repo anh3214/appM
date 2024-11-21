@@ -11,7 +11,7 @@
         android:id="@+id/medicine_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Medicine ID"
+        android:text="@string/medicine_id"
         android:textColor="@color/text_color"
         android:textSize="@dimen/text_size_medium"
         android:textStyle="bold"/>
@@ -20,7 +20,7 @@
         android:id="@+id/medicine_function"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Function"
+        android:text="@string/function"
         android:textColor="@color/text_color"
         android:textSize="@dimen/text_size_small"/>
 </LinearLayout>

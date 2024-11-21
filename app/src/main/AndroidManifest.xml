@@ -25,6 +25,7 @@
         </activity>
         <activity android:name=".ui.activities.MedicineListActivity" />
         <activity android:name=".ui.activities.AddMedicineActivity" />
+        <activity android:name=".ui.activities.AddUserActivity" />
     </application>
 
 </manifest>

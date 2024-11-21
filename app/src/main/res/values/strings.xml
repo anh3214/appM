@@ -2,10 +2,24 @@
     <string name="app_name">Medicine Tracker</string>
     <string name="button_view_list">View Medicines List</string>
     <string name="button_add_medicine">Add Medicine</string>
+    <string name="button_add_user">Add User</string>
     <string name="hint_medicine_id">Medicine ID</string>
     <string name="hint_user_id">User ID</string>
     <string name="hint_function">Function</string>
     <string name="hint_usage">Usage</string>
     <string name="hint_note">Note</string>
     <string name="button_save">Save</string>
+    <string name="name">Name</string>
+    <string name="age">Age</string>
+    <string name="gender_0_for_female_1_for_male">Gender (0 for Female, 1 for Male)</string>
+    <string name="role_e_g_1_for_admin_2_for_user">Role (e.g., 1 for Admin, 2 for User)</string>
+    <string name="save_user">Save User</string>
+    <string name="medicine_id">Medicine ID</string>
+    <string name="function">Function</string>
+    <string name="times_per_day">Times Per Day</string>
+    <string name="warehouse_no">Warehouse No.</string>
+    <string name="quantity_left">Quantity Left</string>
+    <string name="meal_schedule">Meal Schedule</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="storage_condition">Storage Condition</string>
 </resources>

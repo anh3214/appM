@@ -1,6 +1,7 @@
 package com.example.myapplication.ui.fragments
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -40,22 +41,26 @@ class AddMedicineFragment(private val repository: MedicineRepository) : Fragment
         val addButton: Button = view.findViewById(R.id.button_add_medicine)
 
         addButton.setOnClickListener {
-            val medicine = Medicine(
-                medicineId = medicineIdInput.text.toString(),
-                userId = userIdInput.text.toString(),
-                function = functionInput.text.toString(),
-                usage = usageInput.text.toString(),
-                note = noteInput.text.toString(),
-                storageCondition = storageConditionInput.text.toString(),
-                ingredients = ingredientsInput.text.toString(),
-                mealSchedule = mealScheduleInput.text.toString().toIntOrNull() ?: 0,
-                quantityLeft = quantityLeftInput.text.toString().toIntOrNull() ?: 0,
-                warehouseNo = warehouseNoInput.text.toString().toIntOrNull() ?: 0,
-                timesPerDay = timesPerDayInput.text.toString().toIntOrNull() ?: 0
-            )
+            try {
+                val medicine = Medicine(
+                    medicineId = medicineIdInput.text.toString(),
+                    userId = userIdInput.text.toString(),
+                    function = functionInput.text.toString(),
+                    usage = usageInput.text.toString(),
+                    note = noteInput.text.toString(),
+                    storageCondition = storageConditionInput.text.toString(),
+                    ingredients = ingredientsInput.text.toString(),
+                    mealSchedule = mealScheduleInput.text.toString().toIntOrNull() ?: 0,
+                    quantityLeft = quantityLeftInput.text.toString().toIntOrNull() ?: 0,
+                    warehouseNo = warehouseNoInput.text.toString().toIntOrNull() ?: 0,
+                    timesPerDay = timesPerDayInput.text.toString().toIntOrNull() ?: 0
+                )
 
-            lifecycleScope.launch {
-                repository.insertMedicine(medicine)
+                lifecycleScope.launch {
+                    repository.insertMedicine(medicine)
+                }
+            } catch (e: Exception) {
+                Log.e("AddMedicineFragment", "Error inserting medicine: ${e.message}", e)
             }
         }
     }
